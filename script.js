@@ -25,4 +25,8 @@ function getHumanChoice(min, max) {
         return "Please enter the option 1, 2 or 3"
     }
 }
-getHumanChoice();
+console.log(getHumanChoice());
+
+
+let humanScore = 0;
+let computerScore = 0;
