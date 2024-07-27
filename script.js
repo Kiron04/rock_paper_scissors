@@ -36,6 +36,21 @@ function getHumanChoice(min, max) {
 function playRound(humanChoice, computerChoice){
     console.log(humanSelection);
     console.log(computerSelection);
+    if (humanSelection == computerSelection) {
+        console.log("It's a TIE");
+    } else if (humanSelection === 'rock' && computerSelection === 'paper') {
+        console.log("COMPUTER WINS! Paper beats rock.")
+    } else if (humanSelection === 'paper' && computerSelection === 'scissors') {
+        console.log("COMPUTER WINS! Scissors beats paper.")
+    } else if (humanSelection === 'scissors' && computerSelection === 'rock') {
+        console.log("COMPUTER WINS! rock beats scissors.")
+    } else if (humanSelection === 'rock' && computerSelection === 'scissors') {
+        console.log("HUMAN WINS! Rock beats scissors.")
+    } else if (humanSelection === 'paper' && computerSelection === 'rock') {
+        console.log("HUMAN WINS! Paper beats rock.")
+    } else if (humanSelection === 'scissors' && computerSelection === 'paper') {
+        console.log("HUMAN WINS! scissors beats paper.")
+    }
 }
 
 const humanSelection = getHumanChoice();
