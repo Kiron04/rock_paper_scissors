@@ -1,3 +1,8 @@
+////// Score
+let humanScore = 0;
+let computerScore = 0;
+
+
 ///// Logic for computer choice
 function getComputerChoice(min, max) {
     // Creates a varible called computerChoice and uses Math.random to pick a number between 1 and 3. 
@@ -10,9 +15,9 @@ function getComputerChoice(min, max) {
         return "scissors";
     }
 }
-console.log(getComputerChoice(1,4));
 
 
+////// Logic for human choice
 function getHumanChoice(min, max) {
     let humanChoice = Number(window.prompt("Please enter a value: 1: Rock  2: Paper  3: Scissors  and click OK"))
     if (humanChoice == 1) {
@@ -25,8 +30,15 @@ function getHumanChoice(min, max) {
         return "Please enter the option 1, 2 or 3"
     }
 }
-console.log(getHumanChoice());
 
 
-let humanScore = 0;
-let computerScore = 0;
+///// Logic for play round
+function playRound(humanChoice, computerChoice){
+    console.log(humanSelection);
+    console.log(computerSelection);
+}
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice(1,4);
+
+playRound(humanSelection, computerSelection);
