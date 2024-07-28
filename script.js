@@ -1,9 +1,8 @@
-////// Score
+//////////////////// Score ////////////////////
 let humanScore = 0;
 let computerScore = 0;
 
-
-///// Logic for computer choice
+//////////////////// Logic for computer choice ////////////////////
 function getComputerChoice(min, max){
     let computerChoice = Math.floor(Math.random() * (max - min) + min);
     
@@ -24,8 +23,7 @@ function getComputerChoice(min, max){
 
 }
 
-
-////// Logic for human choice
+//////////////////// Logic for human choice ////////////////////
 function getHumanChoice(min, max) {
     let humanChoice = Number(window.prompt("Please enter a value: 1: Rock  2: Paper  3: Scissors  and click OK"))
     
@@ -51,8 +49,7 @@ function getHumanChoice(min, max) {
 
 }
 
-
-///// Logic for play round
+//////////////////// Logic for play round ////////////////////
 function playRound(humanChoice, computerChoice){
     console.log(humanSelection);
     console.log(computerSelection);
@@ -62,36 +59,42 @@ function playRound(humanChoice, computerChoice){
         console.log("It's a TIE");
     }
     
+
     else if (humanSelection === 'rock' && computerSelection === 'paper')
     {
         console.log("COMPUTER WINS! Paper beats rock.")
         computerScore += 1;
     }
     
+
     else if (humanSelection === 'paper' && computerSelection === 'scissors')
     {
         console.log("COMPUTER WINS! Scissors beats paper.")
         computerScore += 1;
     }
     
+
     else if (humanSelection === 'scissors' && computerSelection === 'rock')
     {
         console.log("COMPUTER WINS! rock beats scissors.")
         computerScore += 1;
     }
     
+
     else if (humanSelection === 'rock' && computerSelection === 'scissors')
     {
         console.log("HUMAN WINS! Rock beats scissors.")
         humanScore += 1;
     }
     
+
     else if (humanSelection === 'paper' && computerSelection === 'rock')
     {
         console.log("HUMAN WINS! Paper beats rock.")
         humanScore += 1;
     }
     
+
     else if (humanSelection === 'scissors' && computerSelection === 'paper')
     {
         console.log("HUMAN WINS! scissors beats paper.")
@@ -105,7 +108,4 @@ function playRound(humanChoice, computerChoice){
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice(1,4);
 
-function playGame(){
-    playRound(humanSelection, computerSelection);
-}
-playGame();
+playRound(humanSelection, computerSelection);
