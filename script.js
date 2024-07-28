@@ -4,31 +4,51 @@ let computerScore = 0;
 
 
 ///// Logic for computer choice
-function getComputerChoice(min, max) {
-    // Creates a varible called computerChoice and uses Math.random to pick a number between 1 and 3. 
+function getComputerChoice(min, max){
     let computerChoice = Math.floor(Math.random() * (max - min) + min);
-    if (computerChoice == 1) {
+    
+    if (computerChoice == 1)
+    {
         return "rock";
-    } else if (computerChoice == 2) {
+    }
+    
+    else if (computerChoice == 2)
+    {
         return "paper";
-    } else {
+    } 
+    
+    else
+    {
         return "scissors";
     }
+
 }
 
 
 ////// Logic for human choice
 function getHumanChoice(min, max) {
     let humanChoice = Number(window.prompt("Please enter a value: 1: Rock  2: Paper  3: Scissors  and click OK"))
-    if (humanChoice == 1) {
+    
+    if (humanChoice == 1)
+    {
         return "rock";
-    } else if (humanChoice == 2) {
+    }
+    
+    else if (humanChoice == 2)
+    {
         return "paper";
-    } else if (humanChoice == 3) {
+    }
+    
+    else if (humanChoice == 3) 
+    {
         return "scissors";
-    } else{
+    }
+    
+    else
+    {
         return "Please enter the option 1, 2 or 3"
     }
+
 }
 
 
@@ -36,28 +56,48 @@ function getHumanChoice(min, max) {
 function playRound(humanChoice, computerChoice){
     console.log(humanSelection);
     console.log(computerSelection);
-    if (humanSelection == computerSelection) {
+
+    if (humanSelection == computerSelection)
+    {
         console.log("It's a TIE");
-    } else if (humanSelection === 'rock' && computerSelection === 'paper') {
+    }
+    
+    else if (humanSelection === 'rock' && computerSelection === 'paper')
+    {
         console.log("COMPUTER WINS! Paper beats rock.")
         computerScore += 1;
-    } else if (humanSelection === 'paper' && computerSelection === 'scissors') {
+    }
+    
+    else if (humanSelection === 'paper' && computerSelection === 'scissors')
+    {
         console.log("COMPUTER WINS! Scissors beats paper.")
         computerScore += 1;
-    } else if (humanSelection === 'scissors' && computerSelection === 'rock') {
+    }
+    
+    else if (humanSelection === 'scissors' && computerSelection === 'rock')
+    {
         console.log("COMPUTER WINS! rock beats scissors.")
         computerScore += 1;
-//////////////////////////////////////////////////////////////////  
-    } else if (humanSelection === 'rock' && computerSelection === 'scissors') {
+    }
+    
+    else if (humanSelection === 'rock' && computerSelection === 'scissors')
+    {
         console.log("HUMAN WINS! Rock beats scissors.")
         humanScore += 1;
-    } else if (humanSelection === 'paper' && computerSelection === 'rock') {
+    }
+    
+    else if (humanSelection === 'paper' && computerSelection === 'rock')
+    {
         console.log("HUMAN WINS! Paper beats rock.")
         humanScore += 1;
-    } else if (humanSelection === 'scissors' && computerSelection === 'paper') {
+    }
+    
+    else if (humanSelection === 'scissors' && computerSelection === 'paper')
+    {
         console.log("HUMAN WINS! scissors beats paper.")
         humanScore += 1;
     }
+    
     console.log("COMPUTER SCORE", computerScore);
     console.log("HUMAN SCORE", humanScore);
 }
@@ -65,4 +105,7 @@ function playRound(humanChoice, computerChoice){
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice(1,4);
 
-playRound(humanSelection, computerSelection);
+function playGame(){
+    playRound(humanSelection, computerSelection);
+}
+playGame();
