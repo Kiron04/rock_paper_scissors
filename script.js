@@ -24,30 +24,20 @@ function getComputerChoice(min, max){
 }
 
 //////////////////// Logic for human choice ////////////////////
-function getHumanChoice(min, max) {
-    let humanChoice = Number(window.prompt("Please enter a value: 1: Rock  2: Paper  3: Scissors  and click OK"))
-    
-    if (humanChoice == 1)
-    {
-        return "rock";
-    }
-    
-    else if (humanChoice == 2)
-    {
-        return "paper";
-    }
-    
-    else if (humanChoice == 3) 
-    {
-        return "scissors";
-    }
-    
-    else
-    {
-        return "Please enter the option 1, 2 or 3"
-    }
+function getHumanChoice() {
+    let humanChoice = String(window.prompt("Please Choose One: rock  paper  scissors"));
+    let humanAnswer = humanChoice.toLowerCase();
+    console.log(humanAnswer);
 
+    if (humanAnswer != "rock" && humanAnswer != "paper" && humanAnswer != "scissors") {
+        console.log("Error, Please Try Again.");
+        getHumanChoice();
+    } else {
+        console.log("You have chosen", humanAnswer);
+    }
 }
+getHumanChoice();
+
 
 //////////////////// Logic for play round ////////////////////
 function playRound(humanChoice, computerChoice){
@@ -105,7 +95,7 @@ function playRound(humanChoice, computerChoice){
     console.log("HUMAN SCORE", humanScore);
 }
 
-let humanSelection = getHumanChoice();
-let computerSelection = getComputerChoice(1,4);
+// let humanSelection = getHumanChoice();
+// let computerSelection = getComputerChoice(1,4);
 
-playRound(humanSelection, computerSelection);
+// playRound(humanSelection, computerSelection);
