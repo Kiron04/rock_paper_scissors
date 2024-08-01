@@ -33,16 +33,15 @@ function getHumanChoice() {
         console.log("Error, Please Try Again.");
         getHumanChoice();
     } else {
-        console.log("You have chosen", humanAnswer);
+        return humanAnswer;
     }
 }
-getHumanChoice();
 
 
 //////////////////// Logic for play round ////////////////////
-function playRound(humanChoice, computerChoice){
-    console.log(humanSelection);
-    console.log(computerSelection);
+function playRound(humanAnswer, computerChoice){
+    console.log("Human has entered", humanAnswer);
+    console.log("COM has entered", computerChoice);
 
     if (humanSelection == computerSelection)
     {
@@ -95,7 +94,7 @@ function playRound(humanChoice, computerChoice){
     console.log("HUMAN SCORE", humanScore);
 }
 
-// let humanSelection = getHumanChoice();
-// let computerSelection = getComputerChoice(1,4);
+let humanSelection = getHumanChoice();
+let computerSelection = getComputerChoice(1,4);
 
-// playRound(humanSelection, computerSelection);
+playRound(humanSelection, computerSelection);
