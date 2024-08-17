@@ -25,9 +25,10 @@ function getComputerChoice(min, max){
 
 //////////////////// Logic for human choice ////////////////////
 function getHumanChoice() {
+    // This is the value that the human enters.
     let humanChoice = String(window.prompt("Please Choose One: rock  paper  scissors"));
+    // This changes the value to lowercase. 
     let humanAnswer = humanChoice.toLowerCase();
-    console.log(humanAnswer);
 
     if (humanAnswer != "rock" && humanAnswer != "paper" && humanAnswer != "scissors") {
         console.log("Error, Please Try Again.");
@@ -98,3 +99,13 @@ let humanSelection = getHumanChoice();
 let computerSelection = getComputerChoice(1,4);
 
 playRound(humanSelection, computerSelection);
+
+
+//////////////////// Layout of the game.
+// 1. The score is set to zero for both players.
+// The game starts. 
+// 2. A function needs to be created to get the value from the computer. 
+// 3. A function needs to be created to get the value from the human. 
+// 4. Checking function to compare results and displays outcome 
+// 5. Display the score after the round 
+// 6. Repeat the game for 5 rounds. 
