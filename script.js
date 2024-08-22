@@ -44,48 +44,42 @@ function playRound(humanAnswer, computerChoice){
     console.log("Human has entered", humanAnswer);
     console.log("COM has entered", computerChoice);
 
-    if (humanSelection == computerSelection)
+    if (humanAnswer == computerChoice)
     {
         console.log("It's a TIE");
     }
     
-
-    else if (humanSelection === 'rock' && computerSelection === 'paper')
+    else if (humanAnswer === 'rock' && computerChoice === 'paper')
     {
         console.log("COMPUTER WINS! Paper beats rock.")
         computerScore += 1;
     }
     
-
-    else if (humanSelection === 'paper' && computerSelection === 'scissors')
+    else if (humanAnswer === 'paper' && computerChoice === 'scissors')
     {
         console.log("COMPUTER WINS! Scissors beats paper.")
         computerScore += 1;
     }
     
-
-    else if (humanSelection === 'scissors' && computerSelection === 'rock')
+    else if (humanAnswer === 'scissors' && computerChoice === 'rock')
     {
         console.log("COMPUTER WINS! rock beats scissors.")
         computerScore += 1;
     }
     
-
-    else if (humanSelection === 'rock' && computerSelection === 'scissors')
+    else if (humanAnswer === 'rock' && computerChoice === 'scissors')
     {
         console.log("HUMAN WINS! Rock beats scissors.")
         humanScore += 1;
     }
     
-
-    else if (humanSelection === 'paper' && computerSelection === 'rock')
+    else if (humanAnswer === 'paper' && computerChoice === 'rock')
     {
         console.log("HUMAN WINS! Paper beats rock.")
         humanScore += 1;
     }
     
-
-    else if (humanSelection === 'scissors' && computerSelection === 'paper')
+    else if (humanAnswer === 'scissors' && computerChoice === 'paper')
     {
         console.log("HUMAN WINS! scissors beats paper.")
         humanScore += 1;
@@ -95,10 +89,10 @@ function playRound(humanAnswer, computerChoice){
     console.log("HUMAN SCORE", humanScore);
 }
 
-let humanSelection = getHumanChoice();
-let computerSelection = getComputerChoice(1,4);
+// let humanSelection = getHumanChoice();
+// let computerSelection = getComputerChoice(1,4);
 
-playRound(humanSelection, computerSelection);
+// playRound(humanSelection, computerSelection);
 
 
 //////////////////// Layout of the game.
@@ -109,3 +103,16 @@ playRound(humanSelection, computerSelection);
 // 4. Checking function to compare results and displays outcome 
 // 5. Display the score after the round 
 // 6. Repeat the game for 5 rounds. 
+
+function playGame() {
+    i = 0
+    while (i <=4) {
+        let humanSelection = getHumanChoice();
+        let computerSelection = getComputerChoice(1,4);
+        playRound(humanSelection, computerSelection);
+        i++;
+    }
+}
+
+playGame();
+
