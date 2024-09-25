@@ -101,9 +101,13 @@ function playRound(humanAnswer, computerChoice){
 
 
 function playGame() {
+    // A counter is set to zero, this is to keep count of how many rounds the user plays with the computer. 
     i = 0
-    while (i <=4) {
+    // i <= 2 totals 3 rounds of rock paper scissors.
+    while (i <=2) {
+        // Gets the human choice and saves the value into the variable human selection. 
         let humanSelection = getHumanChoice();
+        // gets the computer choice and saves the value into the varible computer selection. 
         let computerSelection = getComputerChoice(1,4);
         playRound(humanSelection, computerSelection);
         i++;
