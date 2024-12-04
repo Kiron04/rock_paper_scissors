@@ -108,5 +108,15 @@ function playGame() {
     playRound(humanSelection, computerSelection);
 }
 
-playGame();
+// playGame();
+
+// Event Listeners
+const rock_btn = document.getElementById('r');
+console.log(rock_btn);
+
+function selectRock() {
+    alert("You have selected rock.")
+}
+
+
 
