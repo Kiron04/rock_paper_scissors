@@ -16,6 +16,14 @@
 let humanScore = 0;
 let computerScore = 0;
 
+function resetGame(){
+    // reset game
+}
+
+function startGame(){
+    // play the game until someone reaches 5.
+}
+
 //////////////////// Logic for computer choice ////////////////////
 function getComputerChoice(min, max){
     let computerChoice = Math.floor(Math.random() * (max - min) + min);
@@ -39,17 +47,7 @@ function getComputerChoice(min, max){
 
 //////////////////// Logic for human choice ////////////////////
 function getHumanChoice() {
-    // This is the value that the human enters.
-    let humanChoice = String(window.prompt("Please Choose One: rock  paper  scissors"));
-    // This changes the value to lowercase. 
-    let humanAnswer = humanChoice.toLowerCase();
 
-    if (humanAnswer != "rock" && humanAnswer != "paper" && humanAnswer != "scissors") {
-        console.log("Error, Please Try Again.");
-        getHumanChoice();
-    } else {
-        return humanAnswer;
-    }
 }
 
 
@@ -111,10 +109,6 @@ function playGame() {
     let computerSelection = getComputerChoice(1,4);
     playRound(humanSelection, computerSelection);
 }
-
-// playGame();
-
-// Event Listeners
 
 
 
