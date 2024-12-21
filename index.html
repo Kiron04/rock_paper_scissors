@@ -5,17 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
     <script defer src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- The user will click these buttons to play the game. -->
-    <button id="Rock">Rock</button>
-    <button id="paper">Paper</button>
-    <button id="scissors">Scissors</button>
-
-    <div id="scoreboard">
-        <h3>Scoreboard</h3>
-        <h4>Human</h4>
-        <h4>Computer</h4>
+    <div class="score">
+        <h1 class="ties">Ties: 0</h1>
+    </div>
+    <div class="winnerDiv">
+        <h1 class="winner"></h1>
+        <!-- In style display is none so it is not shown until 5 rounds have been completed. -->
+        <button class="reset" onclick="resetGame()">Play Again?</button> 
+    </div>
+    <div class="playerSection">
+        <h3 class="playerChoice"></h3>
+        <h3 class="playerScore">Score: 0</h3>
+        <div class="playerButtons">
+            <button class="player-btn" id="Rock">Rock</button>
+            <button class="player-btn" id="paper">Paper</button>
+            <button class="player-btn" id="scissors">Scissors</button>
+        </div>
+    </div>
+    <div class="computerSection">
+        <h3 class="computerChoice"></h3>
+        <h3 class="computerScore">Score: 0</h3>
     </div>
 </body>
 </html>

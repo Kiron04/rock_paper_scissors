@@ -2,10 +2,14 @@
 // 1. The score is set to zero for both players.
 // The game starts. 
 // 2. A function needs to be created to get the value from the computer. 
-// 3. A function needs to be created to get the value from the human. 
-// 4. Checking function to compare results and displays outcome 
-// 5. Display the score after the round 
-// 6. Repeat the game for 5 rounds. 
+// 3. A function needs to be created to get the human's choice of what button he clicked.
+// 4. The two choices needs to be compared to see who the winner of the round is.
+// 5. If the result is a tie, the tie tally will go up by one.
+// 6. If the human beats the computer, the human's score will go up by one and a new round will begin.
+// 7. If the computer beats the human, the computer score will go up by one and a new round will begin. 
+// 8. The game will keep playing until someone reaches the score of 5 and the game will end. 
+// 9 A display will show the winner of the game. 
+// 10. A link will appear after the game ends to ask if the player wants to play again. 
 
 
 //////////////////// Score ////////////////////
