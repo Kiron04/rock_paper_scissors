@@ -24,6 +24,17 @@ function startGame(){
     // play the game until someone reaches 5.
 }
 
+function getHumanChoice() {
+    const playerButtons = document.querySelectorAll(".playerBtn");
+    playerButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            console.log("You have selected " +btn.id);
+        });
+    });
+}
+
+getHumanChoice();
+
 //////////////////// Logic for computer choice ////////////////////
 function getComputerChoice(min, max){
     let computerChoice = Math.floor(Math.random() * (max - min) + min);
