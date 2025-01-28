@@ -135,8 +135,7 @@ const choices = ['rock', 'paper', 'scissors'];
 buttons.forEach(button => {
     button.addEventListener('click', () => {
         const userChoice = button.id;
-        console.log(userChoice);
-        // playGame(userChoice);
+        playGame(userChoice);
     });
 });
 
