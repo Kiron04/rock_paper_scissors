@@ -88,9 +88,6 @@ function getComputerChoice() {
     return (choices[randomIndex]); // This will return the value into computerChoice.
 }
 
-// Scores 
-let humanScore = 0;
-let computerScore = 0;
 
 // Logic for round
 // // get human choice
