@@ -1,4 +1,4 @@
-//////////////////// Layout of the game.
+// Layout of the game.
 // 1. The score is set to zero for both players.
 // The game starts. 
 // 2. A function needs to be created to get the value from the computer. 
@@ -87,6 +87,10 @@ function getComputerChoice() {
     let randomIndex = Math.floor(Math.random() * choices.length);
     return (choices[randomIndex]); // This will return the value into computerChoice.
 }
+
+// Scores 
+let humanScore = 0;
+let computerScore = 0;
 
 // Logic for round
 // // get human choice
