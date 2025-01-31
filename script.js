@@ -15,22 +15,18 @@
 //////////////////// Logic for computer choice ////////////////////
 function getComputerChoice(min, max){
     let computerChoice = Math.floor(Math.random() * (max - min) + min);
-    
     if (computerChoice == 1)
     {
         return "rock";
     }
-    
     else if (computerChoice == 2)
     {
         return "paper";
     } 
-    
     else
     {
         return "scissors";
     }
-
 }
 
 //////////////////// Logic for human choice ////////////////////
@@ -50,16 +46,16 @@ function getComputerChoice(min, max){
 
 
 //////////////////// Logic for play round ////////////////////
-function playRound(humanAnswer, computerChoice){
-    console.log("Human has entered", humanAnswer);
+function playRound(humanChoice, computerChoice){
+    console.log("Human has entered", humanChoice);
     console.log("COM has entered", computerChoice);
 
-    if (humanAnswer == computerChoice)
+    if (humanChoice == computerChoice)
     {
         console.log("It's a TIE");
     }
     
-    else if (humanAnswer === 'rock' && computerChoice === 'paper')
+    else if (humanChoice === 'rock' && computerChoice === 'paper')
     {
         console.log("COMPUTER WINS! Paper beats rock.")
         computerScore += 1;
@@ -125,19 +121,35 @@ function playRound(humanAnswer, computerChoice){
 // After both parties have made their choice, we need to compare the answers to select the winner. Rock beats scissors, paper beat rock and scissors beats paper. 
 // The window will announce the winner of that round.
 
-// get references to the buttons
-const buttons = document.querySelectorAll('button');
+// main game logic
+function playGmae(userChoice) {
+    const computerChoice = getComputerChoice();
+    playRound(userChoice, computerChoice)
+}
 
-// possible choices
-const choices = ['rock', 'paper', 'scissors'];
+// playGmae(); Uncomment me
 
-// add event listeners to each button
-buttons.forEach(button => {
-    button.addEventListener('click', () => {
-        const userChoice = button.id;
-        playGame(userChoice);
+// Logic for player and computer score 
+// Logic for human choice
+function getHumanChoice() {
+    // get references to the buttons
+    const buttons = document.querySelectorAll('button');
+    
+    // add event listeners to each button
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            let humanChoice = button.id;
+            // playGame(humanChoice);
+            console.log(humanChoice);
+        });
     });
-});
+}
+getHumanChoice();
 
-
-
+// Logic for computer choice
+// Logic for round
+// // get human choice
+// // get computer choice
+// // determine the winner
+// // announce the winner
+// // update the score
