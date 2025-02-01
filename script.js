@@ -91,7 +91,13 @@ function playRound(humanChoice, computerChoice){
 // main game logic
 function playGmae(humanChoice) {
     const computerChoice = getComputerChoice();
-    playRound(humanChoice, computerChoice);
+    if (playerScore === 5 || computerScore === 5)
+    {
+        console.log("End of game")
+    }
+    else{
+        playRound(humanChoice, computerChoice);    
+    } 
 }
 
 // Score 
