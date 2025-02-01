@@ -3,18 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <title>Rock Paper Scissors</title>
 </head>
 <body>
-    <button id="rock">Rock</button>
-    <button id="paper">Paper</button>
-    <button id="scissors">Scissors</button>
-    <div>
-        <p id="humanScoreHeading">Human Score</p>
-        <p id="humanScoreNumber">1</p>
-        <p id="computerScoreHeading">Computer Score</p>
-        <p id="computerScoreNumber">1</p>
+    <div class="section-scoring">
+        <p>Player Score: 0</p>
+        <p>Ties: 0</p>
+        <p>Computer Score: 0</p>
     </div>
+
+    <div class="section-announcement">
+        <p>Player Wins! Rock beats scissors!</p>
+    </div>
+
+    <div class="section-choices">
+        <p>Player Chose: </p>
+        <p>Computer Chose: </p>
+    </div>
+
+    <div class="section-buttons">
+        <button class="buttons" id="rock">Rock</button>
+        <button class="buttons" id="paper">Paper</button>
+        <button class="buttons" id="scissors">Scissors</button>
+    </div>
+
 </body>
 <script src="script.js"></script>
 </html>

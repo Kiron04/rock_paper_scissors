@@ -63,7 +63,7 @@ function playRound(humanChoice, computerChoice){
 
 // main game logic
 function playGmae(humanChoice) {
-    let computerChoice = getComputerChoice();
+    const computerChoice = getComputerChoice();
     playRound(humanChoice, computerChoice);
 }
 
@@ -87,6 +87,7 @@ function getComputerChoice() {
     let randomIndex = Math.floor(Math.random() * choices.length);
     return (choices[randomIndex]); // This will return the value into computerChoice.
 }
+
 
 
 // Logic for round
