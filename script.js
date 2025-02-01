@@ -20,37 +20,48 @@ function playRound(humanChoice, computerChoice){
     if (humanChoice == computerChoice)
     {
         console.log("It's a TIE");
+        ties += 1;
     }
     
     else if (humanChoice === 'rock' && computerChoice === 'paper')
     {
         console.log("COMPUTER WINS! Paper beats rock.")
+        computerScore += 1;
     }
     
     else if (humanChoice === 'paper' && computerChoice === 'scissors')
     {
         console.log("COMPUTER WINS! Scissors beats paper.")
+        computerScore += 1;
     }
     
     else if (humanChoice === 'scissors' && computerChoice === 'rock')
     {
         console.log("COMPUTER WINS! rock beats scissors.")
+        computerScore += 1;
     }
     
     else if (humanChoice === 'rock' && computerChoice === 'scissors')
     {
         console.log("HUMAN WINS! Rock beats scissors.")
+        playerScore += 1;
     }
     
     else if (humanChoice === 'paper' && computerChoice === 'rock')
     {
         console.log("HUMAN WINS! Paper beats rock.")
+        playerScore += 1;
     }
     
     else if (humanChoice === 'scissors' && computerChoice === 'paper')
     {
         console.log("HUMAN WINS! scissors beats paper.")
+        playerScore += 1;
     }
+    console.log("PLAYER SCORE: ", playerScore);
+    console.log("COMPUTER SCORE: ", computerScore);
+    console.log("TIES: ", ties);
+
 }
 
 // Rock Paper Scissors UI Requirements
@@ -67,7 +78,18 @@ function playGmae(humanChoice) {
     playRound(humanChoice, computerChoice);
 }
 
-// Logic for player and computer score
+// Score 
+let playerScore = 0;
+let computerScore = 0;
+let ties = 0;
+
+// Selections
+const player_score_text = document.querySelector('#player-score-text')
+const ties_text = document.querySelector('#ties-text');
+const computer_score_text = document.querySelector('#player-score-text')
+
+const announcement_text = document.querySelector('#announcement-text');
+
 
 
 
