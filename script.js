@@ -14,53 +14,69 @@
 
 //////////////////// Logic for play round ////////////////////
 function playRound(humanChoice, computerChoice){
-    console.log("Human has entered", humanChoice);
-    console.log("COM has entered", computerChoice);
+    // console.log("Human has entered", humanChoice);
+    player_choice_text.textContent = `Player Chose: ${humanChoice}`; //human
+    // console.log("COM has entered", computerChoice);
+    computer_choice_text.textContent = `Computer Chose: ${computerChoice}`; //computer
 
     if (humanChoice == computerChoice)
     {
-        console.log("It's a TIE");
+        // console.log("It's a TIE");
+        announcement_text.textContent = "It's a TIE";
         ties += 1;
+        ties_text.textContent = `Ties: ${ties}`;
     }
     
     else if (humanChoice === 'rock' && computerChoice === 'paper')
     {
-        console.log("COMPUTER WINS! Paper beats rock.")
+        // console.log("COMPUTER WINS! Paper beats rock.")
+        announcement_text.textContent = `COMPUTER WINS! Paper beats rock.`;
         computerScore += 1;
+        computer_score_text.textContent = `Computer Score: ${computerScore}`;
     }
     
     else if (humanChoice === 'paper' && computerChoice === 'scissors')
     {
-        console.log("COMPUTER WINS! Scissors beats paper.")
+        // console.log("COMPUTER WINS! Scissors beats paper.")
+        announcement_text.textContent = `COMPUTER WINS! Scissors beats paper.`;
         computerScore += 1;
+        computer_score_text.textContent = `Computer Score: ${computerScore}`;
     }
     
     else if (humanChoice === 'scissors' && computerChoice === 'rock')
     {
-        console.log("COMPUTER WINS! rock beats scissors.")
+        // console.log("COMPUTER WINS! rock beats scissors.")
+        announcement_text.textContent = `COMPUTER WINS! rock beats scissors.`;
         computerScore += 1;
+        computer_score_text.textContent = `Computer Score: ${computerScore}`;
     }
     
     else if (humanChoice === 'rock' && computerChoice === 'scissors')
     {
-        console.log("HUMAN WINS! Rock beats scissors.")
+        // console.log("HUMAN WINS! Rock beats scissors.")
+        announcement_text.textContent = `HUMAN WINS! Rock beats scissors.`;
         playerScore += 1;
+        player_score_text.textContent = `Player Score: ${playerScore}`;
     }
     
     else if (humanChoice === 'paper' && computerChoice === 'rock')
     {
-        console.log("HUMAN WINS! Paper beats rock.")
+        // console.log("HUMAN WINS! Paper beats rock.")
+        announcement_text.textContent = `HUMAN WINS! Paper beats rock.`;
         playerScore += 1;
+        player_score_text.textContent = `Player Score: ${playerScore}`;
     }
     
     else if (humanChoice === 'scissors' && computerChoice === 'paper')
     {
-        console.log("HUMAN WINS! scissors beats paper.")
+        // console.log("HUMAN WINS! scissors beats paper.")
+        announcement_text.textContent = `HUMAN WINS! scissors beats paper.`;
         playerScore += 1;
+        player_score_text.textContent = `Player Score: ${playerScore}`;
     }
-    console.log("PLAYER SCORE: ", playerScore);
-    console.log("COMPUTER SCORE: ", computerScore);
-    console.log("TIES: ", ties);
+    // console.log("PLAYER SCORE: ", playerScore);
+    // console.log("COMPUTER SCORE: ", computerScore);
+    // console.log("TIES: ", ties);
 
 }
 
@@ -84,11 +100,14 @@ let computerScore = 0;
 let ties = 0;
 
 // Selections
-const player_score_text = document.querySelector('#player-score-text')
+const player_score_text = document.querySelector('#player-score-text');
 const ties_text = document.querySelector('#ties-text');
-const computer_score_text = document.querySelector('#player-score-text')
+const computer_score_text = document.querySelector('#computer-score-text');
 
 const announcement_text = document.querySelector('#announcement-text');
+
+const player_choice_text = document.querySelector('#player-choice-text');
+const computer_choice_text = document.querySelector('#computer-choice-text');
 
 
 
